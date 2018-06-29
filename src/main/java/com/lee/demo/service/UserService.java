@@ -5,6 +5,8 @@ import com.lee.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -13,6 +15,10 @@ public class UserService {
 
     public User findUserByName(String username) {
         return userDao.findByUserName(username);
+    }
+
+    public List<User> findAll() {
+        return userDao.findAll();
     }
 
 }
